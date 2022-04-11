@@ -6,7 +6,10 @@ module.exports = defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        'post-name': resolve(__dirname, 'post-name/index.html'),
+        'motion-design-as-ux': resolve(
+          __dirname,
+          'motion-design-as-ux/index.html'
+        ),
       },
     },
   },
