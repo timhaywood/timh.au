@@ -8,6 +8,8 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "fast-glob": "^3.2.11",
+    "glob": "^8.0.1",
     "vite": "^2.9.0"
   }
 }

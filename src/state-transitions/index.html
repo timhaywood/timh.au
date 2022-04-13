@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Motion as state transitions</title>
+  </head>
+  <body>
+    <div class="content">
+      <h1>Motion as state transitions</h1>
+      <p>
+        When animating a video, you can think of an animations as a function of
+        time. As time increases, like in a video player or your After Effects
+        timeline, your animation progresses.
+      </p>
+      <p>
+        When doing motion for interfaces, your animations are driven by state,
+        not time.
+      </p>
+      <p>This is a fundamental change in the way you think as an animator.</p>
+
+      <p>A few differences that come to mind:</p>
+      <ul>
+        <li>
+          There will probably be more states to transition between then you
+          think, look out for edge cases
+        </li>
+        <li>Transitions can be intercepted or cancelled</li>
+        <li>
+          You might need to take into account what triggered the state change,
+          such as a tap vs gesture
+        </li>
+      </ul>
+      <p class="footer-links">
+        <a href="https://timh.au">timh.au</a>
+        <a href="https://twitter.com/timh_au">@timh_au</a>
+      </p>
+    </div>
+  </body>
+</html>
