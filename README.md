@@ -1,3 +1,3 @@
-# vitejs-vite-jdafs7
+# timh.au
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/vitejs-vite-jdafs7)
+My new personal website, built with Vite.
