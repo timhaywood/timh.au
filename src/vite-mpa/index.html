@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>How to automatically add all html pages to your Vite app</title>
+    <meta
+      name="description"
+      content="Develop a multi-page app with Vite by automatically adding all of your HTML pages to the Vite config, using a glob pattern."
+    />
+  </head>
+  <body>
+    <div class="content">
+      <h1>How to automatically add all html pages to your Vite app</h1>
+      <p>
+        By default, <a href="https://vitejs.dev/">Vite</a> assumes you have a
+        single <code>index.html</code> file as an entry point. Any additional
+        html files need to be added manually to your
+        <code>vite.config.js</code> file,
+        <a href="https://vitejs.dev/guide/build.html#multi-page-app"
+          >as specified here.</a
+        >
+      </p>
+      <p>
+        To add all your html pages automatically, you can define a glob pattern
+        to return an array of files:
+      </p>
+      <code>
+        <pre>
+// vite.config.js          
+import { resolve } from "path";
+import { defineConfig } from "vite";
+<span class="highlight">import glob from "glob";</span>
+
+export default defineConfig({
+  root: "src",
+  build: {
+    outDir: "../dist",
+    rollupOptions: {
+<span class="highlight">      input: glob.sync(</span>
+<span class="highlight">        resolve(__dirname, "src", "**/*.html")</span>
+<span class="highlight">      ),</span>
+    },
+  },
+});
+        </pre>
+      </code>
+      <p>
+        This adds all the <code>.html</code> files in the
+        <code>src</code> directory as pages.
+      </p>
+      <p>
+        Just make sure to install the <code>glob</code> package using your
+        package manager as well.
+      </p>
+      <p class="footer-links">
+        <a href="https://timh.au">timh.au</a>
+        <a href="https://twitter.com/timh_au">@timh_au</a>
+      </p>
+    </div>
+  </body>
+</html>
