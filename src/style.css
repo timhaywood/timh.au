@@ -85,6 +85,7 @@ h6 {
 
 .date {
   width: 4rem;
+  flex-shrink: 0;
 }
 
 .footer-links {
